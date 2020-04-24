@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+/* containers */
+body {
+  margin: auto;
+  background-color: hsl(232, 19%, 15%);
+  font-family: "Inter", sans-serif;
+  color: white;
+  transition: 0.8s;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+small {
+  color: hsl(228, 34%, 66%);
+  font-size: 10px;
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h2 {
+  margin: 0;
+}
+h2 small {
+  display: block;
+}
+
+/*checkbox */
+.toggle {
+  display: flex;
+  align-items: center;
+}
+.toggle small {
+  color: hsl(228, 34%, 66%);
+  margin-right: 5px;
+  font-weight: 600;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+.checkbox:checked + .label {
+  background: hsl(230, 22%, 74%);
+}
+.checkbox:checked + .label .ball {
+  transform: translateX(20px);
+  background-color: white;
+}
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40px;
+  height: 22px;
+  border-radius: 50px;
+  position: relative;
+  padding: 3px;
+  background-image: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+}
+.label:hover {
+  cursor: pointer;
+}
+.ball {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: hsl(232, 19%, 15%);
+  position: absolute;
+  transition: 0.7s;
+}
+/* intro */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  transition: 0.5s;
+}
+.intro small {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro > div {
+  width: 190px;
+  padding: 15px 0;
+  background-color: hsl(228, 28%, 20%);
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.intro > div::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.intro > div:hover,
+.overview > div:hover {
+  cursor: pointer;
+  background-color: hsl(230, 17%, 30%);
+}
+.intro > div.blue::after {
+  background-color: hsl(203, 89%, 53%);
+}
+.intro > div.gradient::after {
+  background-image: linear-gradient(
+    to right,
+    hsl(37, 97%, 70%),
+    hsl(329, 70%, 58%)
+  );
+}
+.intro > div.red::after {
+  background-color: hsl(348, 97%, 39%);
+}
+
+.social_media_icon {
+  margin-right: 6px;
+  width: 12px;
+}
+h1 {
+  margin-top: 10px;
+}
+h1 small {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 400;
+  font-size: 9px;
+  margin-top: 0;
+}
+#green {
+  color: hsl(163, 72%, 41%);
+  font-weight: 600;
+}
+#red {
+  color: hsl(356, 69%, 56%);
+  font-weight: 600;
+}
+.arrow-up,
+.arrow-down {
+  margin-right: 3px;
+}
+
+/*overview*/
+.overview {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+.overview > div {
+  width: 190px;
+  padding: 18px;
+  background-color: hsl(228, 28%, 20%);
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.row1,
+.row2 {
+  display: flex;
+  justify-content: space-between;
+}
+.row1 {
+  align-items: center;
+  margin-bottom: 20px;
+}
+.row2 {
+  align-items: baseline;
+}
+.row1 > small,
+.row2 > small {
+  font-weight: 600;
+}
+.row2 h3 {
+  margin: 0;
+  font-size: 22px;
+}
+.overview small {
+  display: flex;
+  align-items: center;
+}
+
+/* light mode */
+body.light {
+  background-color: hsl(0, 0%, 100%);
+}
+body.light h2 {
+  color: hsl(230, 17%, 14%);
+}
+body.light small {
+  color: hsl(228, 12%, 44%);
+}
+body.light .intro > div,
+body.light .overview > div {
+  background-color: hsl(227, 47%, 96%);
+}
+body.light h1,
+body.light .row2 h3 {
+  color: hsl(230, 17%, 14%);
+}
+body.light h1 small,
+body.light h4 {
+  color: hsl(228, 12%, 44%);
+}
+body.light .intro > div:hover,
+body.light .overview > div:hover {
+  background-color: hsl(0, 0%, 87%);
+}
+@media screen and (max-width: 770px) {
+  .intro,
+  .overview {
+    flex-direction: column;
+  }
+  .intro > div,
+  .overview > div {
+    width: 100%;
+  }
+  .header {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  .header h2 {
+    font-size: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid hsl(228, 34%, 66%);
+  }
+  .intro > div {
+    margin-bottom: 15px;
+  }
+  .toggle {
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+}
