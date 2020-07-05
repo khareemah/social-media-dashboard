@@ -1,1 +1,1 @@
-A frontendmentor challenge. A mobile responsive design of a social medisa dashboard with a theme swither. Check live preview [here](https://social-media-dashboard-with-team-switcher.netlify.app/)
+A frontendmentor challenge. A mobile responsive design of a social media dashboard with a light and dark mode toggle button. Check live preview [here](https://social-media-dashboard-with-team-switcher.netlify.app/)
